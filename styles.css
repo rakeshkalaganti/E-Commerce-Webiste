@@ -1,0 +1,66 @@
+/* Mobile-first responsive styles for Flipkart-like single page */
+.site-header{background:var(--card);box-shadow:0 1px 6px rgba(0,0,0,.06);position:sticky;top:0;z-index:30}
+.topbar{display:flex;gap:12px;align-items:center;padding:10px 12px}
+.logo{font-weight:800;color:var(--accent);text-decoration:none;font-size:1.25rem}
+.hamburger{font-size:1.2rem;background:none;border:none}
+.search-wrap{flex:1;display:flex;align-items:center;gap:6px}
+.search-wrap input{flex:1;padding:10px;border-radius:3px;border:1px solid #ddd}
+.search-wrap button{padding:9px 12px;border-radius:3px;border:none;background:var(--accent);color:#fff}
+.icons{display:flex;gap:8px}
+.icons button{background:none;border:none;font-size:1rem}
+.mobile-nav{display:flex;flex-direction:column;padding:8px 12px;border-top:1px solid #eee}
+.hidden{display:none}
+
+
+.category-strip{display:flex;gap:8px;overflow:auto;padding:12px;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.02))}
+.category{flex:0 0 auto;background:var(--card);padding:10px;border-radius:6px;min-width:110px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.06);cursor:pointer}
+
+
+.hero{position:relative;margin:12px}
+.carousel{height:180px;border-radius:8px;overflow:hidden;position:relative}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;display:flex;align-items:center}
+.slide{opacity:0;transition:opacity .6s ease}
+.slide.active{opacity:1}
+.hero-content{background:linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.05));color:#fff;padding:18px;border-radius:8px;margin-left:12px}
+.btn{display:inline-block;margin-top:8px;padding:8px 12px;background:#fff;color:#111;border-radius:4px;text-decoration:none}
+.carousel-controls{position:absolute;right:12px;bottom:12px;display:flex;gap:6px}
+.carousel-controls button{background:rgba(255,255,255,0.9);border:none;padding:6px 8px;border-radius:6px}
+
+
+.products{padding:12px}
+.products h2{margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:var(--card);padding:10px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.card img{width:100%;height:140px;object-fit:contain}
+.card h3{font-size:1rem;margin:8px 0}
+.card p{color:var(--muted);font-size:.9rem;margin:4px 0}
+.card .actions{display:flex;gap:8px;margin-top:8px}
+.card .actions button{flex:1;padding:8px 6px;border-radius:6px;border:1px solid #eee;background:transparent}
+
+
+.deals{padding:12px}
+.deal-cards{display:flex;gap:8px;overflow:auto}
+.deal{min-width:160px;background:var(--card);padding:18px;border-radius:8px}
+
+
+.site-footer{text-align:center;padding:18px;color:var(--muted)}
+
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center}
+.modal-panel{background:var(--card);width:92%;max-width:760px;border-radius:10px;padding:12px;position:relative}
+.modal-close{position:absolute;top:8px;right:8px;border:none;background:none}
+
+
+/* Larger screens */
+@media(min-width:700px){
+.topbar{padding:14px 28px}
+.carousel{height:320px}
+.grid{grid-template-columns:repeat(4,1fr)}
+.category-strip{padding:18px}
+}
+
+
+@media(min-width:1024px){
+.search-wrap input{max-width:720px}
+}
